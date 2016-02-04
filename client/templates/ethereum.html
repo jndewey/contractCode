@@ -1,0 +1,37 @@
+<template name="ethereum">
+{{setConnection}}
+<h3>Basic Ethereum Information</h3>
+<p>Web3 Version: {{Web3Version}}</p>
+<p>Current Provider: {{current}}</p>
+<p>Client Version: {{Web3ClientVersion}}</p>
+<p>Coinbase: {{defaultAccount}}</p>
+<p>Balance: {{balance}}</p>
+<p>Accounts: {{accounts}}</p>
+<p>Gas Price: {{gasprice}}</p>
+
+<div class='decrypt'>
+<input type="submit" value="Test Encryption" class="btn btn-primary"/>
+</div>
+<p></p>
+<div class='python2'>
+<input type="submit" value="Test Python Script" class="btn btn-primary"/>
+</div>
+<p></p>
+
+<p><label class="item item-input">
+  	<input type="text" name='address' placeholder="Enter contract address">
+   </label></p>
+<div class='find'>
+<input type="submit" value="Submit" class="btn btn-primary"/>
+</div>
+
+<p><h3>Coming Soon:</h3></p>
+
+<p>We are working on a user-friendly interface where users will be able to experiment with smart contracts</p>
+<p>on the Ethereum Frontier platform via a graphical user interface.  Currently, most work with the Ethereum</p>
+<p>platform must be done via a command line interface, which is not a viable solution for lawyers who do not have</p>
+<p>coding experience in Linux or MacOS development environments.  We'd like to give the average tech-savy lawyer</p>
+<p>an opportunity to touch and feel smart contracts in a safe and *free* environment.</p>
+
+
+</template>

@@ -1,0 +1,49 @@
+<template name="output_2">
+<center>LOAN COMMITMENT</center>
+<p></p>
+<p></p>
+<p>{{deal.commitment_date}}</p>
+{{#each deal.borrower_name}}
+{{name}}<br>
+{{/each}}
+{{deal.borrower_address_line1}}<br>
+{{deal.borrower_address_line2}}<br>
+Attention: {{deal.borrower_contact}}<br>
+<p>
+</p>
+	Re:	Commercial Mortgage Loan (the “<b>Loan</b>”) from {{deal.lender}} (the "<b>Bank</b>") to {{deal.borrower_name}}, a {{deal.borrower_state}} {{deal.borrower_type}} (the "<b>Borrower</b>") relating to the property located at {{deal.property_address}} (the "<b>Property</b>")<br>
+<p></p>
+<p></p>
+Dear {{deal.borrower_contact}}:<br>
+<p></p>
+	Bank has considered your request for financing and is pleased to inform you that the Bank has agreed (the “<b>Commitment</b>”) to make available to Borrower a commercial mortgage loan (the “<b>Loan</b>”) upon the terms and subject to the conditions hereinafter set forth.<br>
+<br>
+<p><b>Borrower</b>:  The Borrower will be {{deal.borrower_name}}, a {{deal.borrower_state}} {{deal.borrower_type}}.</p>
+
+<p><b>Amount</b>:  The amount of the Loan will be the lesser of (1) {{deal.loan_amount_written}} and No/100 Dollars (${{deal.loan_amount}}), (2) {{deal.LTV_written}} percent ({{deal.LTV}}%) of the appraised value of the Property, as determined by the appraisal approved by Bank pursuant to the Appraisal condition precedent described below, or (3) or the maximum amount that will still allow the Property to satisfy a minimum debt service coverage ratio of {{deal.DSCR}} to 1, as determined in accordance with the financial covenant paragraph below.</p>
+
+<p><b>Purpose</b>:  The proceeds of the Loan will be used by Borrower to finance a {{deal.property_type}} located at {{deal.property_address}}, which contains {{deal.property_description}} (the "<b>Property</b>").  In the event the proceeds of the Loan are being used to refinance existing debt secured by the Property (the "<b>Existing Debt</b>"), Borrower acknowledges that Bank's commitment hereunder is conditioned on there being no discounted payoff in connection with the repayment of the Existing Debt.  Any discounted payoff must be approved by Bank (in its sole discretion) in writing, and such approval may be conditioned upon a dollar for dollar reduction in the amount of Loan based on the amount of the discount.</p>
+
+
+<p><b>Guarantor</b>:  Repayment of the Loan and all other obligations of Borrower to Bank set forth in the Loan documents will be unconditionally and jointly and severally guaranteed by {{deal.guarantors}}, individually (collectively, the "<b>Guarantors</b>"). Any individual and/or entity owning, directly or indirectly, fifteen percent (15%) or more of the Borrower may be required to guaranty the Loan.  In any case, a minimum of 51% of the ownership interests must guaranty the Loan and must have full control over the Borrower.</p>
+
+{{#if deal.limited}}<p>Each Guarantor's liability for principal shall be limited to the greater of (A) ${{deal.cap_amount}} or (B) {{deal.cap_percent_written}} percent ({{deal.cap_percentage}}%) of the Loan amount, which amount shall not be reduced by payments made by or on behalf of Borrower, any other Guarantor or by the proceeds of any collateral securing the Borrower’s obligations under the Loan Documents.  The limitation on each Guarantor’s liability under this paragraph shall apply only to the repayment of principal and shall not operate to reduce any Guarantor’s liability for any other amounts owed under the Loan Documents, including, without limitation, interest on the Loan, fees, expenses due under the Loan Documents, taxes and operating expenses and other carry costs associated with the operation of the Property, together with all costs and expenses incurred by Lenders in enforcing their rights under the Loan Documents, including, without limitation, reasonable attorneys' fees.  In addition, each Guarantor shall deliver a "bad boy" guarantee of additional matters (e.g., fraud, waste, environmental indemnities and bankruptcy filings) not subject to the limitation described above.</p>
+{{/if}}
+
+<p><b>Term</b>: The Loan will be for a term of {{deal.term_written}} ({{deal.term}}) years from the Closing date.
+
+{{#if deal.extend}}The Borrower shall have an option to extend the maturity date for an additional _________ (___)[years/months] on the condition that (i) no default under the Loan documents shall have occurred that has not been cured within any applicable cure period, (ii) no default under any other loans made by Bank to Borrower or any affiliate of Borrower shall have occurred that has not been cured within any applicable cure period, [(iii) the Borrower shall deposit into the Reserve (as defined below) an amount equal to the total amount of interest that Bank estimates, in its sole discretion, will accrue under the Loan during that ______ (___) [month/year] period], (iv) the Borrower pays a nonrefundable extension fee in an amount equal to [_______] percent (_____%) of the outstanding principal balance of the Loan on the date of such extension, and (v) Borrower and Guarantors execute such other documents and instruments as Bank may require.
+{{/if}}
+</p>
+
+<p><b>Interest Rate</b>: The interest rate during the first ______ (__) years of the Loan shall be fixed and shall be equal to ________ percent (___%).  The interest rate during each ______ (___) year period thereafter (each, an "Interest Period") shall be adjusted and fixed for _______ (___) years and shall be equal to the greater of (A) _______ percent (___%) plus the Prime Rate quoted three (3) Business Days before the beginning of the applicable Interest Period, or (B) _________% per annum.  The interest rate applicable to the Loan, as adjusted from time to time, is hereinafter referred to as the "Applicable Interest Rate".  In no event shall the Applicable Interest Rate be less than _____% during the term of the Loan.  Interest shall be computed for the actual number of days which have elapsed, on the basis of a 360-day year and shall be payable in arrears.</p>
+
+<p>As used in this Commitment Letter, the term "Prime Rate" means, as of the date of determination, the rate of interest published in the Money Rates Section of The Wall Street Journal as the U.S. Prime Rate.</p>
+
+<p></p>
+
+  <p><div id='showCode' class='submit'><input class="btn btn-primary" size= '50' value="Generate contractCode Object"></div></p>
+  <p></p>
+  <p><div id='uploadCode' class='submit'><input class="btn btn-primary" size='50' value="Upload Code to Ethereum Blockchain"></div></p>
+
+</template>

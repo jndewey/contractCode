@@ -1,0 +1,19 @@
+<template name="ethereum2">
+<center>Work in Progress</center>
+{{setConnection}}
+<h3>Basic Ethereum Information</h3>
+<p>Web3 Version: {{Web3Version}}</p>
+<p>Current Provider: {{current}}</p>
+<p>Client Version: {{Web3ClientVersion}}</p>
+<p>Coinbase: {{defaultAccount}}</p>
+<p>Balance of Coinbase: {{balance}}</p>
+<p>Accounts: {{accounts}}</p>
+<p></p>
+{{compile}}
+<p></p>
+<p>Contract Hash: {{hash}}</p>
+<p>Contract Address: {{address}}</p>
+<p>ABI: {{abi}}</p>
+<p></p>
+<p><h3>Note: If you see a Contract Hash noted above, then your contractCode object was successfully uploaded to the Ethereum blockchain.  You can look up your contract by going to the site etherscan.io and inputting the Contract Hash as a transaction hash in the search function.  If you don't see a Contract Hash above, don't worry, it just means our server or node is down for work.  While this exercise doesn't provide much, if any, practical benefit right now, we've allowed access to this unfinished alpha so that people can see how easy it can be to upload contracts to the blockchain.  As we progress, our goal is to provide users with more useful utilities while continuing to maintain a user friendly web based interface.</h3></p>
+</template>

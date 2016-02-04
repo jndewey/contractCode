@@ -1,0 +1,132 @@
+<template name="creCAS">
+  <h1 class="title">Credit Approval Summary (CAS)</h1>
+		<div class="list">
+      <h3>Credit Action/Request:</h3>
+  			<p><label class="item item-input">
+    			<input type="text" name='CAS_date' placeholder="Date">
+  			</label></p>
+        <p><label class="item item-input">
+          <input type="text" name='division' placeholder="Division">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='cost_center' placeholder="Cost Center">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='referral' placeholder="Referred By:">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='relationship_name' placeholder="Relationship Name">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='loan_number' placeholder="Loan Number">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='relationship_manager' placeholder="Relationship Manager">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='credit_officer' placeholder="Credit Officer">
+        </label></p>
+        <h3>Total Credit Risk Exposure Summary (All amounts in $)</h3>
+         <h3>Exposure Summary:</h3>
+         <p>INSERT INPUTS</p>
+         <h3>Loan Request</h3>
+         <p><label class="item item-input">
+          <input type="text" size='35' name='loan_amount_written' placeholder="Loan Amount (Written)(e.g., Five Million)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='35' name='loan_amount' placeholder="Loan Amount (Numeral)(e.g., 5,000,000)">
+        </label></p>
+  			<p><label class="item item-input">
+    			<input type="text" name='borrower_name' placeholder="Borrower">
+  			</label></p>
+          <div class='borrower'>
+          <p><input type="submit" value="Add Another" class="btn btn-primary"/>Note: Press Add Another button after each borrower name, <b>EVEN IF THERE IS ONLY ONE BORROWER</b></p>
+         </div>
+  			<p><label class="item item-input">
+    			<input type="text" size="25" name= 'borrower_address_line1' placeholder="Borrower's Address, Line 1">
+  			</label></p>
+  			<p><label class="item item-input">
+    			<input type="text" size="25" name='borrower_address_line2' placeholder="Borrower's Address, Line 2">
+  			</label></p>
+  			<p><label class="item item-input">
+    			<input type="text" size="25" name='borrower_contact' placeholder="Borrower's Contact Name">
+  			</label></p>
+        <p><label class="item item-input">
+          <input type="text" size="30" name='borrower_state' placeholder="State of Borrower's Organization">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size="50" name='borrower_type' placeholder="Borrower's Organization Type (e.g., limited liability company)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name= 'property_address' placeholder="Property's Address">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='100' name= 'purpose' placeholder="Purpose">
+        </label></p>
+        <h3>OWNERSHIP BREAKDOWN</h3>
+        <p>[INSERT OWNERSHIP GRID]</p>
+        <p><label class="item item-input">
+          <input type="text" name='obligor_current_rr' placeholder="Obligor Current RR">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='obligor_proposed_rr' placeholder="Obligor Proposed RR">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='40' name= 'term_written' placeholder="Term of the Loan (Written) (e.g., seven years)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='40' name='term' placeholder="Term of the Loan (Numeral)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='60' name='extend' placeholder="Is there any extension right (if so, enter true; otherwise, enter false)">
+        </label></p>
+        <h3>REPAYMENT TERMS:</h3>
+         [INSERT REPAYMENT OPTIONS]
+        <p><label class="item item-input">
+          <input type="text" size='35' name='LTV_written' placeholder="Loan-to-Value (Written)(e.g., seventy)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='35' name='LTV' placeholder="Loan-to-Value (Numeral)(e.g., 70)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name= 'DSCR' placeholder="DSCR (e.g., 1.35)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='35' name='property_type' placeholder="Property Type (e.g., retail shopping enter)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='60' name='property_description' placeholder="Property Description (e.g., a 312 unit multi-family apartment complex)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='lender' placeholder="Lender's Name">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='55' name= 'guarantors' placeholder="Guarantor">
+        </label></p>
+        <div class='guarantor'>
+          <p><input type="submit" value="Add Another" class="btn btn-primary"/>Note: Press Add Another button after each guarantor name, <b>EVEN IF THERE IS ONLY ONE GUARANTOR</b></p>
+         </div>
+        <p><label class="item item-input">
+          <input type="text" size='50' name='limited' placeholder="Are Guaranties limited? (enter either true or false)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" size='40' name='cap_amount' placeholder="If guaranty capped, enter dollar amount here">
+        </label></p>
+          <p><label class="item item-input">
+          <input type="text" size='70' name='cap_percent_written' placeholder="If guaranty capped, enter percentage of Loan amount here, written out (e.g. twenty)">
+        </label></p>
+        <p><label class="item item-input">
+          <input type="text" name='cap_percentage' size='60' placeholder="If guaranty capped, enter percentage in numeral form here (e.g., 20)">
+        </label></p>
+     
+		</div>
+		<p></p>
+	<div class='doc'>
+		<input type="submit" value="Submit" class="btn btn-primary"/>
+	</div>
+  <div>
+    Test Object:
+    {{test}}
+  </div>
+
+</template>
