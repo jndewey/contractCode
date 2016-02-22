@@ -1,7 +1,7 @@
 Template.ethereum2.helpers({
 
   setConnection: function() {
-    web3 = new Web3(new Web3.providers.HttpProvider('http://65.34.183.153:8545'));
+    web3 = new Web3(new Web3.providers.HttpProvider('http://65.34.170.14:8545'));
     console.log(web3);
   },
 
