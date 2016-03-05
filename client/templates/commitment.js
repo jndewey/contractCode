@@ -68,6 +68,6 @@ Template.commitment.events({
     alert("Contract Saved");
     Borrowers.remove({});
     Guarantors.remove({});
-    Router.go('output_2', contracts);
+    Router.go('output_2', contracts); // output_2 is commitment letter in html format
   }
 });

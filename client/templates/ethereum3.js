@@ -1,4 +1,4 @@
-Template.ethereum2.helpers({
+Template.ethereum3.helpers({
 
   setConnection: function() {
     web3 = new Web3(new Web3.providers.HttpProvider('http://65.34.170.14:8545'));
@@ -9,11 +9,6 @@ Template.ethereum2.helpers({
   var coin = '0xf0c5cef39b17c213cfe090a46b8c7760ffb7928a';
   var balance = web3.eth.getBalance(coin);
   return balance;
-  },
-
-  HashTest: function() {
-    var str = web3.sha3("Some ASCII string to be hashed");
-    return str;
   },
   current: function() {
     var str = web3.currentProvider.host;

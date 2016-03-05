@@ -61,7 +61,6 @@ Template.ethereum.helpers({
     console.log(testObject);
     Session.set('Object', testObject);
   }
-
 });
 
 Template.ethereum.events({
@@ -71,9 +70,11 @@ Template.ethereum.events({
     var abi = Session.get('ABI');
     var MyContract = web3.eth.contract(abi);
     var myContractInstance = MyContract.at(address);
-    var object = myContractInstance.greet();
+    var object = myContractInstance.returnContract();
+    var objectParsed = JSON.parse(object);
+    var template = objectParsed.document_template;
     Session.set('contractObject', object);
-    Router.go('document');
+    Router.go('document2');
   },
 
   'click .decrypt': function(e) {
