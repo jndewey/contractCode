@@ -1,6 +1,6 @@
 <template name="ethereum">
 {{setConnection}}
-<h3>Basic Ethereum Information</h3>
+<h3>Ethereum Dashboard</h3>
 <p>Web3 Version: {{Web3Version}}</p>
 <p>Current Provider: {{current}}</p>
 <p>Client Version: {{Web3ClientVersion}}</p>
@@ -24,9 +24,10 @@
 <input type="submit" value="Submit" class="btn btn-primary"/>
 </div>
 
-<p><h3>Coming Soon:</h3></p>
+<p><h3>Disclosure:</h3></p>
 
-<p>We are working on a user-friendly interface where users will be able to experiment with smart contracts</p>
-<p>on the Ethereum Frontier platform (soon to be Homestead release) via a graphical user interface.  Currently, most work </p><p> with the Ethereum platform must be done via a command line interface, which is not a viable solution for lawyers </p><p> who do not have coding experience in Linux or MacOS development environments.  We'd like to give the average tech-savy lawyer</p>
-<p>an opportunity to touch and feel smart contracts in a safe and *free* environment.</p>
+<p>The above dashboard provides basic information about the ethereum node utilized by this Dapp (decentralized application).</p><p>Please note that the ethereum node is currently connected to the PUBLIC ethereum blockchain and NOT a private test net.  This means that all transactions done here are distributed into the "wild".  With the rising price of ETH, we may replace our public node with a test-net.  We will advise of any changes, but until otherwise notified, you should assume your transactions are being transmitted to the public Ethereum blockchain.</p>
+<p>To load a test smart contract that you or anyone else created on our platform, simply input the contract address in the form above and submit.</p>
+
+
 </template>

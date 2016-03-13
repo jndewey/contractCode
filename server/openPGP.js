@@ -1,4 +1,5 @@
   Meteor.methods({
+
      'encrypt': function(message, publicKey) {
       Future = Npm.require("fibers/future");
       var future = new Future();

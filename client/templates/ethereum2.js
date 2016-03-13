@@ -60,7 +60,6 @@ Template.ethereum2.helpers({
 
       } else {
         console.log("Contract mined! Address: " + contract.address);
-        console.log(contract);
         Session.set('contractAddress', contract.address);
       }
 

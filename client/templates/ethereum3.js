@@ -3,6 +3,7 @@ Template.ethereum3.helpers({
   setConnection: function() {
     web3 = new Web3(new Web3.providers.HttpProvider('http://65.34.170.14:8545'));
     console.log(web3);
+    Session.set('contractAddress', 'Pending...may take several minutes to mine.');
   },
 
   balance: function() {
@@ -54,14 +55,14 @@ Template.ethereum3.helpers({
         Session.set('contractHash', contract.transactionHash);
 
       } else {
-        console.log("Contract mined! Address: " + contract.address);
-        console.log(contract);
+        alert("Contract mined! Address: " + contract.address);
         Session.set('contractAddress', contract.address);
       }
 
     }
   });
   Session.set('ABI', abi);
+  //Meteor.call('add_file');
 },
 hash: function() {
     var hash = Session.get('contractHash');

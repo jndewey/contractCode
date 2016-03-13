@@ -31,6 +31,10 @@ ethereum:web3
 meteorhacks:npm
 
 
-npm-container
 meteorhacks:async
 jaredmartin:future
+
+
+npm-container
+akasha:meteor-ipfs
+
