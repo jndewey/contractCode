@@ -5,7 +5,7 @@ Template.ethereum.helpers({
     console.log(web3);
   },
   balance: function() {
-  var coin = '0xf0c5cef39b17c213cfe090a46b8c7760ffb7928a';
+  var coin = '4d0b54d482cd770484af8494649ed7e662c50833';
   var balance = web3.eth.getBalance(coin);
   return balance;
   },
@@ -26,7 +26,7 @@ Template.ethereum.helpers({
     return version;
   },
   defaultAccount: function() {
-   var account = '0xf0c5cef39b17c213cfe090a46b8c7760ffb7928a';
+   var account = '4d0b54d482cd770484af8494649ed7e662c50833';
     return account;
   },
   accounts: function() {

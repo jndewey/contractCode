@@ -6,7 +6,7 @@ Template.ethereum2.helpers({
   },
 
   balance: function() {
-  var coin = '0xf0c5cef39b17c213cfe090a46b8c7760ffb7928a';
+  var coin = '4d0b54d482cd770484af8494649ed7e662c50833';
   var balance = web3.eth.getBalance(coin);
   return balance;
   },
@@ -28,7 +28,7 @@ Template.ethereum2.helpers({
     return version;
   },
   defaultAccount: function() {
-   var account = '0xf0c5cef39b17c213cfe090a46b8c7760ffb7928a';
+   var account = '4d0b54d482cd770484af8494649ed7e662c50833';
     return account;
   },
   accounts: function() {
@@ -37,14 +37,14 @@ Template.ethereum2.helpers({
   },
   to_string: function() {
   var contract = Contracts.findOne(this._id);
-  var string = JSON.stringify(contract); 
+  var string = JSON.stringify(contract);
   return string;
   },
 
  compile: function() {
   var contract = Contracts.findOne(this._id); // pulls in instant contractCode object (in the form of DB cursor)
   var contract_string = JSON.stringify(contract); // converts contractCode object into a JSON string
-  var mySenderAddress = '0xf0c5cef39b17c213cfe090a46b8c7760ffb7928a'; //sets sender address to default account
+  var mySenderAddress = '4d0b54d482cd770484af8494649ed7e662c50833'; //sets sender address to default account
   var _contractcontent = contract_string; //sets response from contract to the string output of our contractCode object
   var contractSource = 'contract mortal { address owner; function mortal() { owner = msg.sender; } function kill() { if (msg.sender == owner) suicide(owner); } } contract contractCode is mortal { string contractCodeObject; function contractCode(string _contractcontent) public { contractCodeObject = _contractcontent; } function returnContract() constant returns (string) { return contractCodeObject; } }'; // source code ready for compilation
   var contractCompiled = web3.eth.compile.solidity(contractSource); // produces compiled code

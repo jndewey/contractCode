@@ -9,7 +9,6 @@ insecure
 iron:router
 twbs:bootstrap
 underscore
-standard-minifiers
 meteor-base
 mobile-experience
 mongo
@@ -38,3 +37,8 @@ jaredmartin:future
 npm-container
 akasha:meteor-ipfs
 
+standard-minifier-css
+standard-minifier-js
+silentcicero:solc-compiler
+silentcicero:solc
+promise
